@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BooksActivity"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cartshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_marginTop="5dp"
+        android:fontFamily="serif"
+        android:text="         View Cart "
+        android:textFontWeight="5dp"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="270dp"
+
+        android:text="Check Out"
+        android:textSize="20dp"
+        android:onClick="checkouts"
+        android:textStyle="bold" />
+    <!--<Button-->
+        <!--android:id="@+id/clearcart"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginLeft="160dp"-->
+        <!--android:background="@drawable/buttons"-->
+        <!--android:text="Clear"-->
+        <!--android:textSize="20dp"-->
+        <!--android:onClick="clear"-->
+        <!--android:textStyle="bold" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:id="@+id/recyclerView1">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</RelativeLayout>
