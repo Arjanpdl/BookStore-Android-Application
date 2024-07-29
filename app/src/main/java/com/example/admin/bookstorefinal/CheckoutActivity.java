@@ -20,7 +20,7 @@ EditText mstudentid,mstudentname;
     private FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
     DatabaseReference mRef;
-Button checkout;
+    Button checkout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +41,6 @@ Button checkout;
         FirebaseDatabase mFirebasedatabase;
         mFirebasedatabase = FirebaseDatabase.getInstance();
         mRef = mFirebasedatabase.getReference("Cart");
-
-
         databaseReference = FirebaseDatabase.getInstance().getReference("Order").child("Date "+date);
 
         checkout.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +57,7 @@ Button checkout;
         if(!TextUtils.isEmpty(studentNameValue)&&!TextUtils.isEmpty(mcneeseIdValue)){
             String id = databaseReference.push().getKey();
             Students students = new Students(id,studentNameValue,mcneeseIdValue);
-            // databaseReference.child(bttnName.getText().toString()).push().setValue(students);
+            //  databaseReference.child(bttnName.getText().toString()).push().setValue(students);
             databaseReference.child(mstudentid.getText().toString()).setValue(students);
             mstudentname.setText("");
             mstudentid.setText("");
